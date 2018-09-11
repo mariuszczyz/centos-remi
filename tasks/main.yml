@@ -1,0 +1,13 @@
+---
+# tasks file for mariuszczyz.centos-remi
+
+- name: Install REMI repository RPM
+  yum:
+    name: {{ REMI_RPM_URL }}
+    state: present
+  notify: yum-clean-metadata
+
+- name: Import REMI repository GPG RPM signing key
+  rpm_key:
+    key: "{{ REMI_GPG_RPM_KEY }}"
+    state: present

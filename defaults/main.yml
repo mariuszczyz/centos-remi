@@ -1,0 +1,6 @@
+---
+# defaults file for mariuszczyz.centos-remi
+
+# do not edit, unless it's stored in a custom location
+REMI_RPM_URL: https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+REMI_GPG_RPM_KEY: http://rpms.remirepo.net/RPM-GPG-KEY-remi
