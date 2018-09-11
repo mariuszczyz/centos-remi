@@ -47,4 +47,5 @@ BSD
 ## Author Information
 
 Author: Mariusz Czyz
+
 Date: 09/2018
