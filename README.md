@@ -1,38 +1,50 @@
-Role Name
-=========
+# CentOS 7 REMI Repository Install Role
 
-A brief description of the role goes here.
+Install REMI repository.
 
-Requirements
-------------
+## Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+None.
 
-Role Variables
---------------
+## Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+None
 
-Dependencies
-------------
+## Dependencies
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+EPEL repository.
 
-Example Playbook
-----------------
+Can be installed via Ansible Galaxy:
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+`ansible-galaxy install mariuszczyz.centos-epel`
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+## Example Playbook
 
-License
--------
+Fetch this role from Ansible Galaxy:
+
+`ansible-galaxy install mariuszczyz.centos-remi`
+
+In playbook.yml:
+
+```bash
+- hosts: servers
+  roles:
+    - { role: mariuszczyz.centos-remi, tags: ['centos-remi'] }
+```
+
+Run it:
+
+`ansible-playbook -i hosts playbook.yml --user root --ask-pass --limit=servers`
+
+Optionally, run just this role:
+
+`ansible-playbook -i hosts playbook.yml --user root --ask-pass --limit=servers --tags=centos-remi`
+
+## License
 
 BSD
 
-Author Information
-------------------
+## Author Information
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Author: Mariusz Czyz
+Date: 09/2018
